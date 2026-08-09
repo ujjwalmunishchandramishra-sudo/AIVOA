@@ -1,0 +1,305 @@
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background: #f5f7fa;
+}
+
+/* =========================
+   LEFT PANEL
+========================= */
+
+.complaint-panel {
+  background: #ffffff;
+  padding: 28px 48px;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-header h1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #202124;
+  margin-bottom: 6px;
+}
+
+.page-header p {
+  color: #777;
+  font-size: 14px;
+}
+
+.status-badge {
+  background: #fff3c4;
+  color: #8a6d1d;
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   FORM SECTIONS
+========================= */
+
+.form-section {
+  margin-top: 28px;
+}
+
+.form-section h2 {
+  font-size: 12px;
+  color: #8b91a1;
+  letter-spacing: 0.5px;
+  margin-bottom: 17px;
+  font-weight: 700;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #3f4248;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #dfe2e7;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 13px;
+  background: #ffffff;
+  outline: none;
+  color: #444;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #6257d9;
+}
+
+.form-group textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* =========================
+   PROCESSING BOX
+========================= */
+
+.processing-box {
+  margin-top: 30px;
+  padding: 15px;
+  background: #f4f3ff;
+  border: 1px solid #ddd9ff;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.processing-box strong {
+  font-size: 13px;
+}
+
+.processing-box p {
+  font-size: 11px;
+  color: #777;
+  margin-top: 3px;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ddd;
+  border-top-color: #6257d9;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   RIGHT COPILOT
+========================= */
+
+.copilot-panel {
+  min-height: 100vh;
+  background: #f8fafc;
+  border-left: 1px solid #dfe3e8;
+  display: flex;
+  flex-direction: column;
+}
+
+.copilot-header {
+  padding: 25px 22px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copilot-header h2 {
+  font-size: 16px;
+  color: #252a34;
+  margin-bottom: 5px;
+}
+
+.copilot-header p {
+  font-size: 12px;
+  color: #777;
+}
+
+.online-dot {
+  width: 7px;
+  height: 7px;
+  background: #6257d9;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+/* =========================
+   CHAT
+========================= */
+
+.copilot-content {
+  flex: 1;
+  padding: 30px 22px;
+  overflow-y: auto;
+}
+
+.ai-message,
+.chat-message {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.ai-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #eeeefe;
+  color: #6257d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.message {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .message {
+  background: #6257d9;
+  color: #ffffff;
+  border-color: #6257d9;
+  max-width: 80%;
+}
+
+.ai-chat-message .message {
+  max-width: 80%;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.copilot-input {
+  margin: 0 18px 5px;
+  background: #ffffff;
+  border: 2px solid #635bdb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 5px 7px;
+}
+
+.attachment-icon {
+  padding-left: 5px;
+}
+
+.copilot-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.copilot-input button {
+  border: none;
+  background: #4d43b8;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.copilot-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.powered-by {
+  text-align: center;
+  font-size: 8px;
+  color: #999;
+  padding: 6px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .copilot-panel {
+    min-height: 600px;
+  }
+
+  .complaint-panel {
+    padding: 25px;
+  }
+}
